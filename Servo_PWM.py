@@ -1,6 +1,4 @@
-from bsmLib import src
-from src import bsmLib
-from bsmLib import RPL
+import RPL
 RPL.init()
 
 f_reverse = 1000
