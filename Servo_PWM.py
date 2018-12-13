@@ -20,13 +20,13 @@ def turn():
     TT = (degreeturn - 90) / anglepersecond
     while time.time() < currenttime + TT:
       RPL.pwmWrite(0, 2000, 3000) 
-    if time.time() > currenttime + T:
+    if time.time() > currenttime + TT:
       RPL.pwmWrite(0, 1500, 3000)
   if degreeturn < 90:
     TT = degreeturn / anglepersecond
     while time.time() < currenttime + TT:
       RPL.pwmWrite(0, 1000, 3000)
-    if time.time() > currenttime + T:
+    if time.time() > currenttime + TT:
       RPL.pwmWrite(0, 1500, 3000)
     
 turn()
