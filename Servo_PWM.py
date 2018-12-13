@@ -1,5 +1,6 @@
 import RPL
 RPL.init()
+import time 
 
 f_reverse = 1000
 neutral = 1500
@@ -13,7 +14,7 @@ RPL.pinMode(ServoR, RPL.PWM)
 RPL.pinMode(ServoL, RPL.PWM)
 
 def turn():
-  degreeturn = int(raw_input("Deg_RT > "))
+  degreeturn = int(raw_input("Deg_T > "))
   currenttime = time.time()
   if degreeturn > 90:
     TT = (degreeturn - 90) / anglepersecond
