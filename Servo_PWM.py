@@ -5,7 +5,7 @@ import time
 f_reverse = 1000
 neutral = 1500
 f_forward = 2000
-# anglepersecond = 
+anglepersecond = 30
 
 ServoR = int(raw_input("S_R > "))
 ServoL = int(raw_input("S_L > "))
