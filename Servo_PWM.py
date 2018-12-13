@@ -28,6 +28,7 @@ def turn():
     if time.time() > currenttime + T:
       RPL.pwmWrite(0, 1500, 3000)
     
+turn()
 
 
 
