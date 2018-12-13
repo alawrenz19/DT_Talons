@@ -15,13 +15,13 @@ RPL.pinMode(ServoL, RPL.PWM)
 def turn():
   degreeturn = int(raw_input("Deg_RT > "))
   currenttime = time.time()
-  if degreeturn > 90
+  if degreeturn > 90:
     TT = (degreeturn - 90) / anglepersecond
     while time.time() < currenttime + TT:
       RPL.pwmWrite(0, 2000, 3000) 
     if time.time() > currenttime + T:
       RPL.pwmWrite(0, 1500, 3000)
-  if degreeturn < 90
+  if degreeturn < 90:
     TT = degreeturn / anglepersecond
     while time.time() < currenttime + TT:
       RPL.pwmWrite(0, 1000, 3000)
