@@ -5,7 +5,7 @@ import time
 f_reverse = 1000
 neutral = 1500
 f_forward = 2000
-anglepersecond = 30
+#anglepersecond = 30
 
 ServoR = int(raw_input("S_R > "))
 ServoL = int(raw_input("S_L > "))
@@ -29,7 +29,19 @@ def turn():
     if time.time() > currenttime + TT:
       RPL.pwmWrite(0, 1500, 3000)
     
-turn()
+def drive(x2,y2): 
+  v = vector(x2, y2) 
+  length = v.mag()
+  return length
+  abslength = abs(magnitude) * 15.24
+  Runtime = Length / 13.3
+  currenttime = time.time()
+ 	while time.time() < (currenttime + Runtime):
+    		RPL.servoWrite(motorL, 2000)
+		RPL.servoWrite(motorR, 1000)
+  	if time.time() > (currenttime + Runtime):
+    		RPL.servoWrite(motorL, 0)
+    		RPL.servoWrite(motorR, 0)
 
 
 
