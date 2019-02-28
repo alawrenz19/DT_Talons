@@ -9,9 +9,9 @@ f_forward = 2000
 
 def DT_PWM_Establish:
 	ServoR = int(raw_input("Pls input what pin you've inserted your right talon into >")
-		RPL.pinMode(ServoR, RPL.PWM)
 	ServoL = int(raw_input("Pls input what pin you've inserted your left talon into >")
-		RPL.pinMode(ServoL, RPL.PWM)
+	RPL.pinMode(ServoR, RPL.PWM)
+	RPL.pinMode(ServoL, RPL.PWM)
 
 def DT_Speed:
 	DT_input = int(raw_input("Pls input what speed you want to run the motors at: 4 = Forward_fastest, \
