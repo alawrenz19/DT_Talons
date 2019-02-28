@@ -8,9 +8,9 @@ f_forward = 2000
 #anglepersecond = 30
 
 def DT_PWM_Establish():
-	Talo = int(raw_input("Pls input what pin \
-	you've inserted your right talon into >")
 	Talon = int(raw_input("Pls input what pin \
+	you've inserted your right talon into >")
+	Tal= int(raw_input("Pls input what pin \
 	you've inserted your left talon into >")
 	RPL.pinMode(ServoR, RPL.PWM)
 	RPL.pinMode(ServoL, RPL.PWM)
