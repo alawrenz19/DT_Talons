@@ -7,41 +7,26 @@ neutral = 1500
 f_forward = 2000
 #anglepersecond = 30
 
-ServoR = int(raw_input("S_R > "))
-ServoL = int(raw_input("S_L > "))
+def DT_PWM_Establish:
+	ServoR = int(raw_input("Pls input what pin you've inserted your right talon into >")
+		RPL.pinMode(ServoR, RPL.PWM)
+	ServoL = int(raw_input("Pls input what pin you've inserted your left talon into >")
+		RPL.pinMode(ServoL, RPL.PWM)
 
-RPL.pinMode(ServoR, RPL.PWM)
-RPL.pinMode(ServoL, RPL.PWM)
+def DT_Speed:
+	DT_input = int(raw_input("Pls input what speed you want to run the motors at: 4 = Forward_fastest, \
+	3 = Foward_fast, 0 = stop, 2 = Reverse_fast, 1 = Reverse_fastest > "))
+	if DT_input = 4:
+		RPL.pwmWrite(0, 2000, 3000) 
+	if DT_input = 3:
+		RPL.pwmWrite(0, 1750, 3000) 
+	if DT_input = 0:
+		RPL.pwmWrite(0, 1500, 3000) 
+	if DT_input = 2:
+		RPL.pwmWrite(0, 1250, 3000) 
+	if DT_input = 1:
+		RPL.pwmWrite(0, 1000, 3000) 
+	else: print("The number you inputted is not an available option. Pls run the code again with one of the 5 numbers.")
 
-def turn():
-  degreeturn = int(raw_input("Deg_T > "))
-  currenttime = time.time()
-  if degreeturn > 90:
-    TT = (degreeturn - 90) / anglepersecond
-    while time.time() < currenttime + TT:
-      RPL.pwmWrite(0, 2000, 3000) 
-    if time.time() > currenttime + TT:
-      RPL.pwmWrite(0, 1500, 3000)
-  if degreeturn < 90:
-    TT = degreeturn / anglepersecond
-    while time.time() < currenttime + TT:
-      RPL.pwmWrite(0, 1000, 3000)
-    if time.time() > currenttime + TT:
-      RPL.pwmWrite(0, 1500, 3000)
-    
-def drive(x2,y2): 
-  v = vector(x2, y2) 
-  length = v.mag()
-  return length
-  abslength = abs(magnitude) * 15.24
-  Runtime = Length / 13.3
-  currenttime = time.time()
- 	while time.time() < (currenttime + Runtime):
-    		RPL.servoWrite(motorL, 2000)
-		RPL.servoWrite(motorR, 1000)
-  	if time.time() > (currenttime + Runtime):
-    		RPL.servoWrite(motorL, 0)
-    		RPL.servoWrite(motorR, 0)
-
-
-
+DT_PWM_Establish()
+DT_Speed()
