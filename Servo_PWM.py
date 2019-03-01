@@ -26,7 +26,7 @@ def DT_Speed():
 		RPL.pwmWrite(0, 1250, 3000) 
 	if DT_input == 1:
 		RPL.pwmWrite(0, 1000, 3000) 
-	else: print("The number you inputted is not an available option. Pls run the code again with one of the 5 numbers.")
+	else if: print("The number you inputted is not an available option. Pls run the code again with one of the 5 numbers.")
 
 DT_PWM_Establish()
 DT_Speed()
