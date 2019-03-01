@@ -14,8 +14,7 @@ def DT_PWM_Establish():
 	RPL.pinMode(ServoL, RPL.PWM)
 
 def DT_Speed():
-	DT_input = int(raw_input("Pls input what speed you want to run the motors at: 4 = Forward_fastest, \
-	3 = Foward_fast, 0 = stop, 2 = Reverse_fast, 1 = Reverse_fastest > "))
+	DT_input = int(raw_input("Pls input what speed you want to run the motors at: 4 = Forward_fastest, 3 = Foward_fast, 0 = stop, 2 = Reverse_fast, 1 = Reverse_fastest > "))
 	if DT_input == 4:
 		RPL.pwmWrite(0, 2000, 3000) 
 	elif DT_input == 3:
