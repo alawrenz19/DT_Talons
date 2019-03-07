@@ -35,3 +35,4 @@ def DT_Servo_Calibration():
    	RPL.pwmWrite(Servo_IVL, 1500, 3000)
    	Print("Now, pls release the calibration button. If the talon was successfullu calibrated it should blink green.")
     
+DT_Servo_Calibration()
