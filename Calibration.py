@@ -26,7 +26,7 @@ def DT_Servo_Calibration():
     	print("Now, pls release the calibration button. If the talon was successfullu calibrated it should blink green.")
     
   if Talon_Number == 1: 
-    	Servo_IVL = int(raw_input("Pls input what pin you've inserted your right talon into > "))
+    	Servo_IVL = int(raw_input("Pls input what pin you've inserted your talon into > "))
 	RPL.pinMode(Servo_IVL, RPL.PWM)
     	print("Now, pls hold down the calibration button, which says 'B/C CAL'.")
     	Finished = str(raw_input("Pls type 'yes', if you are pressing down on the button > "))
