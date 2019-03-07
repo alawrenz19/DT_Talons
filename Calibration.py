@@ -1,7 +1,6 @@
 import RPL
 RPL.init()
 import time 
-from Servo_PWM import DT_PWM_Establish
 
 f_reverse = 1000
 neutral = 1500
