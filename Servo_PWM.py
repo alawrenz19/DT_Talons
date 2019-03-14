@@ -7,7 +7,7 @@ neutral = 1500
 f_forward = 2000
 #anglepersecond = 30
 
-def DT_PWM_Establish():
+def DT_PWM_Speedrange():
 	ServoR = int(raw_input("Pls input what pin you've inserted your right talon into > "))
 	RPL.pinMode(ServoR, RPL.PWM)
 	ServoL = int(raw_input("Pls input what pin you've inserted your left talon into > "))
@@ -41,5 +41,5 @@ def DT_PWM_Establish():
 	else:
 		print("The number you inputted is not an available option. Pls run the code again with one of the 5 numbers.")
 
-DT_PWM_Establish()
+DT_PWM_Speedrange()
 
