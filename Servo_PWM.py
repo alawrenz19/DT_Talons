@@ -13,11 +13,13 @@ def DT_PWM_Speedrange():
 	ServoL = int(raw_input("Pls input what pin you've inserted your left talon into > "))
 	RPL.pinMode(ServoL, RPL.PWM)
 
-	DT_input_R = int(raw_input("Pls input what speed you want to run the right motor at: 4 = Forward_fastest, 3 = Foward_fast, 0 = stop, 2 = Reverse_fast, 1 = Reverse_fastest > "))
+	DT_input_R = int(raw_input("Pls input what speed you want to run the right motor at: 4 = Forward_fastest, 3 = Foward_fast, 6 = Forward_veryslow,0 = stop, 2 = Reverse_fast, 1 = Reverse_fastest > "))
 	if DT_input_R == 4:
 		RPL.pwmWrite(ServoR, 2000, 3000) 
 	elif DT_input_R == 3:
 		RPL.pwmWrite(ServoR, 1750, 3000) 
+	elif DT_input_R == 6:
+		RPL.pwmWrite(ServoR, 1550, 3000) 
 	elif DT_input_R == 0:
 		RPL.pwmWrite(ServoR, 1500, 3000) 
 	elif DT_input_R == 2:
